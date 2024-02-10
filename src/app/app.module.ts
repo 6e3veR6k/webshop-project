@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RoutingModule } from './modules/routing.module';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialModule } from "./modules/material.module";
+
 
 @NgModule({
   declarations: [
@@ -11,11 +14,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RoutingModule,
+    MaterialModule
   ],
   providers: [
     provideAnimationsAsync()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+}
