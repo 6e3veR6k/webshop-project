@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   columnsPerRow = 3;
+  category!: string;
 
   onColumnsCountChanged(colsNumber: number) {
     this.columnsPerRow = colsNumber;
 
+  }
+
+
+  onShowCategory($event: string) {
+    this.category = $event;
   }
 }
